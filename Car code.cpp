@@ -8,7 +8,8 @@ class Car {
     int year;
     
     public:
-    void setdetails (){
+    void acceptdetails()
+{
         cout <<"enter model name:";
         cin >> model;
         cout <<"enter company name:";
@@ -16,14 +17,16 @@ class Car {
         cout <<"enter year of car:";
         cin >> year;
     }
-    void acceptdetails (){
+    void displaydetails()
+{
         cout <<"model of car is"<<model<<endl;
         cout <<"company name is"<< name<<endl;
         cout << "year of car is" <<year<<endl;
     }
 };
-int main () {
+int main ()
+{
     Car mycar;
-    mycar.setdetails();
     mycar.acceptdetails();
+    mycar.displaydetails();
 }
