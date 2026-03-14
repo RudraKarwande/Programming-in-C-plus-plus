@@ -1,0 +1,50 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class time{
+    protected:
+int h1 ,h2,m1,m2 ,t ,tt ;
+    public:
+    void add_details(){
+    cout<<"enter the hours and minutes  for first time: "<<endl;
+    cin>> h1>>m1;
+    cout <<"enter the hours and minutes for second time:"<<endl;
+    cin >> h2>>m2;
+}
+};
+class addtime : public time {
+    public:
+    void total_time(){
+        t = h1 + h2;
+        tt = m1+ m2;
+        
+        if (tt < 60){
+            t= h1 + h2;
+            tt = m1 +m2;
+        
+            
+            cout << "total hours in time is :"<<t <<endl;
+             cout << "total minutes in time is :"<<tt <<endl;
+            
+        }
+        else (tt > 60); { 
+    h1= h2+1;
+    m1 = m2+60;
+    cout <<"hour is "<<h1<<endl;
+    cout <<"minute is "<<m1<<endl;
+        
+    }
+        
+    }
+};
+
+
+int main (){
+  addtime t1;
+    t1.add_details();
+    t1.total_time();
+    
+    return 0;
+}
+    
